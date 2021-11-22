@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
+}
+
+*:focus {outline: none;}
+
+body {
+  margin: 0;
+  font-size: 1.3rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  background: linear-gradient(to top right, white, grey);
+}
+
+.card {
+  position: relative;
+  height: 500px;
+  width: 400px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10rem);
+  color: #4a6068;
+  animation: zoomin 1s;
+}
+
+input {
+  border-radius: 10px;
+  height: 50px;
+  width: 75%;
+  border: 2px solid #fff;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #4a6068;
+}
+
+::placeholder {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #4a6068;
+}
+
+button {
+  height: 50px;
+  width: 75%;
+  border-radius: 10px;
+  background-color: #00c6ff;
+  border: 2px solid #00c6ff;
+  position: absolute;
+  bottom: 10%;
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+}
+
+.top {
+  border: 2px solid #00c6ff;
+  display: inline;
+  position: absolute;
+  top: -3%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background-color: #00c6ff;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  @keyframes zoomin {
+    from {transform: scale(0)}
+    to {transform: scale(0.7)}
+  }
+  .card {
+    transform: scale(0.7);
+  }
+}
