@@ -37,6 +37,7 @@ main {
   backdrop-filter: blur(10rem);
   color: #4a6068;
   animation: zoomin 1s;
+  text-align: center;
 }
 
 input {
